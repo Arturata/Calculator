@@ -75,6 +75,8 @@ class Calculator(QMainWindow):
     def eq(self):
         self.res = str(eval(self.expression))
         self.lineEdit_res.setText(self.res)
+        self.lineEdit_ex.setText(self.res)
+        self.expression = self.res
         self.res = '0'
 
     def clear(self):
