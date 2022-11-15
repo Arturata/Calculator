@@ -31,11 +31,6 @@ class Calculator(QMainWindow):
         self.pushButton_two = None
         self.pushButton_ten = None
         self.pushButton_mod = None
-        self.pushButton_sin = None
-        self.pushButton_cos = None
-        self.pushButton_tg = None
-        self.pushButton_ctg = None
-        self.pushButton_trunc = None
         self.buttonGroup = None
         self.pushButton_br1 = None
         self.pushButton_br2 = None
@@ -64,11 +59,6 @@ class Calculator(QMainWindow):
         self.pushButton_two.clicked.connect(self.two)
         self.pushButton_ten.clicked.connect(self.ten)
         self.pushButton_mod.clicked.connect(self.mod)
-        self.pushButton_sin.clicked.connect(self.sin)
-        self.pushButton_cos.clicked.connect(self.cos)
-        self.pushButton_tg.clicked.connect(self.tg)
-        self.pushButton_ctg.clicked.connect(self.ctg)
-        self.pushButton_trunc.clicked.connect(self.trunc)
         [i.clicked.connect(self.brackets) for i in self.buttonGroup_br.buttons()]
         [i.clicked.connect(self.run) for i in self.buttonGroup.buttons()]
 
@@ -152,7 +142,7 @@ class Calculator(QMainWindow):
         self.expression = str(abs(eval(self.expression)))
 
     def p(self):
-        if self.expression == '0.0':
+        if self.expression == '' or self.expression == '0':
             self.expression = str(numpy.pi)
         else:
             self.expression = str(eval(str(self.expression)) * numpy.pi)
@@ -182,21 +172,6 @@ class Calculator(QMainWindow):
         self.expression += '≡'
         x, y = self.expression.split('≡')
         self.expression = str(math.fmod(math.trunc(eval(x)), math.trunc(eval(y))))
-
-    def sin(self):
-        pass
-
-    def cos(self):
-        pass
-
-    def tg(self):
-        pass
-
-    def ctg(self):
-        pass
-
-    def trunc(self):
-        pass
 
 
 if __name__ == '__main__':
