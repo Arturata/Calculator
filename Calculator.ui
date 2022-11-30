@@ -10,6 +10,18 @@
     <height>446</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>462</width>
+    <height>446</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>462</width>
+    <height>446</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -52,14 +64,14 @@ background-color: rgb(255, 255, 255);</string>
      </widget>
     </item>
     <item row="7" column="5">
-     <widget class="QPushButton" name="pushButton_mod">
+     <widget class="QPushButton" name="pushButton_round">
       <property name="styleSheet">
        <string notr="true">color: rgb(0, 0, 255);
 font: 11pt &quot;MS Shell Dlg 2&quot;;
 </string>
       </property>
       <property name="text">
-       <string>mod</string>
+       <string>[x]</string>
       </property>
      </widget>
     </item>
@@ -401,13 +413,13 @@ background-color: rgb(255, 255, 255);</string>
      </widget>
     </item>
     <item row="6" column="5">
-     <widget class="QPushButton" name="pushButton_p">
+     <widget class="QPushButton" name="pushButton_back">
       <property name="styleSheet">
        <string notr="true">color: rgb(0, 0, 255);
 font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>π</string>
+       <string>backspace</string>
       </property>
      </widget>
     </item>
